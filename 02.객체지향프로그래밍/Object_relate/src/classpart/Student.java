@@ -1,7 +1,8 @@
 package classpart;
 
 public class Student {
-    public int studentId;
+    public static int serialNum = 100;
+    private int studentId;
     public String studentName;
     public String address;
 
@@ -13,6 +14,21 @@ public class Student {
         math = new Subject();
     }
     
+    public Student(String name){
+        this.studentName = name;
+        serialNum++;
+        studentId = serialNum;
+
+    }
+    public static int Nameup(){
+        return 
+    }
+    // 이름은 같지만 매개변수가 다른 경우에 이를 오버로딩이라 한다. 
+    public Student(String name, int id){
+        studentId = id;
+        studentName = name;
+    }
+
     public int getStudentId() {
         return this.studentId;
     }
